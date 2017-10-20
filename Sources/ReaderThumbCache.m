@@ -167,7 +167,7 @@
 	{
 		id object = [thumbCache objectForKey:request.cacheKey];
 
-		if (object == nil) // Thumb object does not yet exist in the cache
+		if (object == nil || [object isKindOfClass:[NSNull class]])
 		{
 			object = [NSNull null]; // Return an NSNull thumb placeholder object
 
